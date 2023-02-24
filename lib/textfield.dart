@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:se23/constants.dart' as constant;
+
 class textfield extends StatelessWidget {
   final String text;
   final bool ispassword;
-  const textfield(required String text, {
+
+  const textfield({
     super.key,
-    required this.text, required this.ispassword
+    required this.text,
+    required this.ispassword,
   });
 
   @override
@@ -23,17 +26,13 @@ class textfield extends StatelessWidget {
                 color: constant.dayprimary,
                 fontWeight: FontWeight.w500,
                 fontSize: 30.0,
-
               ),
-              disabledBorder:OutlineInputBorder(
+              enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                     color: constant.dayprimary,
-                    width:2,
-                    style: BorderStyle.solid
-                ),
-              )
-          ),
-        )
-    );
+                    width: 2,
+                    style: BorderStyle.solid),
+              )),
+        ));
   }
 }
