@@ -17,11 +17,19 @@ class _loginscreenState extends State<loginscreen> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
+            Expanded(child: Container()),
              Image.network(''),
-           textfield(text: 'email',ispassword:false,
+           Expanded(
+             flex: 2,
+             child: textfield(text: 'email',ispassword:false,
 
+             ),
            ),
-            textfield(text: 'password',ispassword:true,)
+            Expanded(child: textfield(text: 'password',ispassword:true,
+            TextButton(onPressed: (){},child:Text('login'))
+            )
+            ),
+            Expanded(child: Container())
           ],
         ),
       ),

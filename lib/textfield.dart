@@ -3,7 +3,7 @@ import 'package:se23/constants.dart' as constant;
 class textfield extends StatelessWidget {
   final String text;
   final bool ispassword;
-  const textfield({
+  const textfield(required String text, {
     super.key,
     required this.text, required this.ispassword
   });
