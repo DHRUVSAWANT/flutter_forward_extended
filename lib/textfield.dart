@@ -4,11 +4,12 @@ import 'package:se23/constants.dart' as constant;
 class textfield extends StatelessWidget {
   final String text;
   final bool ispassword;
+  final Function(String) onch;
 
   const textfield({
     super.key,
     required this.text,
-    required this.ispassword,
+    required this.ispassword, required this.onch,
   });
 
   @override
@@ -16,6 +17,7 @@ class textfield extends StatelessWidget {
     return Padding(
         padding: EdgeInsets.all(15.0),
         child: TextField(
+          onChanged: onch,
           style: TextStyle(
             color: constant.dayprimary,
           ),

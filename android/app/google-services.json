@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "454579971333",
+    "project_id": "flutterforwadextended",
+    "storage_bucket": "flutterforwadextended.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454579971333:android:c3f256f5fa4148c1eec36c",
+        "android_client_info": {
+          "package_name": "com.example.se23"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454579971333-7ahtqrvfmu5po42fa3l39sb67kp4js9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMlhLTg0TRdLAOWj9jMaeb-gQD91y-01A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454579971333-7ahtqrvfmu5po42fa3l39sb67kp4js9o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "454579971333-q41bf3a02rq2na491nh3dt1q75i4gb97.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.se23"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
