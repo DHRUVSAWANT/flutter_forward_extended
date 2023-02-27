@@ -18,35 +18,40 @@ class _MainscreenState extends State<Mainscreen> {
           Positioned(
               top: size.height * 0.1,
               child: Text(
-                'Location',
+                '${constants.apiInstance.city}',
                 style: TextStyle(
+
                   color: constants.textPrimary,
                   decoration: TextDecoration.none,
-                  fontSize: 30,
+                  fontSize: 40,
+
                 ),
               )),
           Positioned(
               top: size.height * 0.15,
               child: Text(
-                'Date',
+
+                constants.apiInstance.date,
                 style: TextStyle(
+                  fontSize: 25,
                   color: constants.textPrimary,
                   decoration: TextDecoration.none,
                 ),
               )),
           Positioned(
             top: size.height * 0.3,
-            child: Container(
-              width: size.width * 0.6,
-              height: size.height * 0.23,
-              color: Colors.greenAccent,
+            child: SizedBox(
+              width: size.width*0.6,
+              height: size.height*0.23,
+              child: Image.network('http://openweathermap.org/img/wn/${constants.apiInstance.icon}@2x.png',scale: 0.007,color: Colors.red,),
             ),
           ),
           Positioned(
             top: size.height * 0.6,
             child: Text(
-              '23',
+              '${constants.apiInstance.temp}°c',
               style: TextStyle(
+                color: Colors.black,
                 fontSize: size.width * 0.16,
                 decoration: TextDecoration.none,
               ),
@@ -56,20 +61,21 @@ class _MainscreenState extends State<Mainscreen> {
             bottom: size.height*0.03,
               child: Row(
             children: [
+
               extraInfo(size: size,
                 icon: Icons.thermostat,
                 name: 'MaxTemp',
-                value: '23°c',),
+                value: '${constants.apiInstance.maxTemp}°c',),
 
                   extraInfo(size: size,
-                    icon: Icons.thermostat,
+                    icon: Icons.air_rounded,
                     name: 'windspeed',
-                    value: '2 m/s',),
+                    value: '${constants.apiInstance.airSpeed} m/s',),
 
                   extraInfo(size: size,
                     icon: Icons.percent,
                     name: 'Humidity',
-                    value: '23%',),
+                    value: '${constants.apiInstance.humidity}%',),
                 ],
           )),
         ]));

@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../constants.dart' as constant;
 import 'package:se23/textfield.dart';
+import 'package:se23/Location.dart';
 
 import 'mainscreen.dart';
 class loginscreen extends StatefulWidget {
@@ -14,7 +15,19 @@ class loginscreen extends StatefulWidget {
 class _loginscreenState extends State<loginscreen> {
 
   late String email,password;
-  int myvar=1;
+  int myvar=0;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    apiCall();
+  }
+
+  void apiCall()async{
+    var location=await determinePosition();
+    myvar =await constant.apiInstance.getLocation(location.latitude.toString(), location.longitude.toString());
+  }
   @override
   Widget build(BuildContext context) {
     final _auth =FirebaseAuth.instance;
